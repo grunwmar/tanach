@@ -1,0 +1,89 @@
+body {
+
+}
+
+
+h2, h1 {
+    text-align: center;
+    border-bottom: 4px double black;
+    border-top: 4px double black;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: normal;
+    font-family: "SBL BibLit";
+}
+
+h1 {
+    color:white;
+    background-color: black;
+    border-color: white;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    border: 6px double black;
+}
+
+h2:before, h2:after {
+    content: " ";
+}
+
+h2 {
+
+}
+
+
+.verse {
+    width: 100%;
+    font-family: "SBL BibLit";
+}
+
+
+.verse tr.first{
+    font-size: 1.22em;
+}
+
+.verse td[lang=pl]{
+    text-align: justify;
+    font-family: "Zilla Slab";
+    direction: ltr;
+}
+
+td[lang=he], td[lang=yi] {
+    direction: rtl !important;
+    text-align: justify !important;
+
+}
+
+.verse th {
+    padding: 0px;
+    padding-left: 0.2rem;
+    padding-top: 0.2rem;
+    width: 1.33rem;
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.95rem;
+    font-weight: normal;
+
+}
+
+.chapter, .cover{
+    text-align: justify;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    padding-right: 2px;
+    padding-left:  2px;
+    margin-right:  2px;
+    margin-left:   2px;
+    padding-top:    5px;
+    padding-bottom: 5px;
+    margin-top:    5px;
+    margin-bottom: 5px;
+
+}
+
+.cover .cover-lang {
+    text-align: center;
+    margin-top: 100px;
+    display: block;
+}

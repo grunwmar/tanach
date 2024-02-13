@@ -1,0 +1,60 @@
+\documentclass{article} 
+\usepackage[<!config.Appearance.paper_size>, margin=<!config.Appearance.paper_margin>]{geometry}
+\usepackage{fontspec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{cjhebrew}
+\usepackage{graphicx}
+\usepackage{enumitem,xcolor}
+\usepackage{ragged2e}
+\usepackage[babel=true]{microtype}
+\usepackage{polyglossia} 
+
+\setdefaultlanguage{hebrew} 
+\setmainlanguage[numerals=hebrew]{hebrew}
+\setotherlanguage{<!lang>}  
+
+\newfontfamily\hebrewfont[Script=Hebrew]{<!config.Fonts.font_family_heb>}
+\newfontfamily\hebrewfontsf[Script=Hebrew]{<!config.Fonts.font_family_heb>}
+
+\newfontfamily\<!lang>font[Script=Latin]{<!config.Fonts.font_family_lat>}
+
+\setenumerate[1]{label=\vcenter\hbox{\texthebrew{\protect\hebrewnumeral{\value{enumi}}}}}
+
+\renewcommand{\thesection}{\color{<!config.Appearance.enum_color>}\<!config.Appearance.chapter_enum_size> פרק \arabic{section}}
+
+\title{\Huge <!title>}
+\date{}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=100
+\hbadness=100
+\sloppy
+
+\begin{document}
+
+\clearpage\maketitle
+\thispagestyle{empty}
+\setcounter{page}{1}
+
+{% for chapter in chapters %}
+    \newpage
+    \section{}
+    \begin{enumerate}[label=\<!config.Appearance.enum_size>\color{<!config.Appearance.enum_color>}\theenumi,leftmargin=-0.2in, rightmargin=-0.2in, itemsep=<!config.Appearance.enum_vsep>]
+        {% for verse in chapter %}
+        \nopagebreak\item
+        \begin{justify}
+            \begin{hebrew}    
+                \nopagebreak\<!config.Appearance.font_size_heb> \noindent <!verse.he>
+                    \end{hebrew}
+                {% if verse.pl %}
+                \begin{<!lang>}
+                    \nopagebreak\<!config.Appearance.font_size_lat> \noindent <!verse.pl>
+                    \end{<!lang>}
+                {% endif %}
+                \end{justify}
+        {% endfor %}
+    \end{enumerate}
+{% endfor %}
+
+\end{document}

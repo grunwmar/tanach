@@ -1,0 +1,71 @@
+body {
+    font-family: "SBL BibLit";
+}
+
+[lang=he], [lang=yi] {
+    direction: rtl !important;
+}
+
+
+h2, h1 {
+    text-align: center;
+    border-bottom: 4px double black;
+    border-top: 4px double black;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: normal;
+}
+
+h1 {
+    color:white;
+    background-color: black;
+    border-color: white;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    border: 6px double black;
+}
+
+h2:before, h2:after {
+    content: " ";
+}
+
+.verse:before {
+    content: " " attr(data-index) " ";
+    white-space: pre;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+p, .verse {
+    display: inline;
+}
+
+.verse p:not(:first-child):before{
+    content: " · ";
+    white-space: pre;
+    display: inline-block;
+}
+
+.chapter, .cover{
+    text-align: justify;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    padding-right: 10px;
+    padding-left:  10px;
+    margin-right:  10px;
+    margin-left:   10px;
+    padding-top:    15px;
+    padding-bottom: 15px;
+    margin-top:    10px;
+    margin-bottom: 10px;
+
+}
+
+.cover .cover-lang {
+    text-align: center;
+    margin-top: 100px;
+    display: block;
+}

@@ -1,0 +1,17 @@
+[General]
+export_destination = "."
+source_destination = "sources"
+
+[Fonts]
+font_family_heb = "Ezra SIL"
+font_family_lat = "CMU Concrete"
+
+[Appearance]
+font_size_heb = "Large"
+font_size_lat = "large"
+paper_size = "a5paper"
+paper_margin = "55pt"
+enum_color = "RoyalPurple"
+enum_size = "normalsize"
+enum_vsep = "0pt"
+chapter_enum_size = "Huge"

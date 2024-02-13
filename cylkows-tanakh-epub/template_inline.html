@@ -1,0 +1,24 @@
+<!doc html>
+<html dir="{{ direction }}">
+    <head>
+        <meta charset="utf-8" />
+        <link href="style_inline.css" type="text/css" rel="stylesheet" />
+        <title>{{ title }} ~ {{ main_lang.upper() }}</title>
+    </head>
+    <body>
+        <div class="cover">
+            <h1>{{ title }}</h1>
+            <div class="cover-lang" style="font-family: Cousine">language code: <b>{{ main_lang.upper() }}</b></div>
+        </div>
+        {%- for i, chapter in chapters %}
+        <div class="chapter">
+            <h2>{{ i }}</h2>
+            {%- for j, verse in chapter %}
+                <div class="verse" data-index="{{ j }}">
+                    {%- for lang, text in verse.items() %}<p lang="{{ lang }}">{{ text[1] }}</p>{%- endfor %}
+                </div>
+            {%- endfor %}
+        </div>
+        {%- endfor %}
+    </body>
+</html>

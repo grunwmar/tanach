@@ -1,0 +1,166 @@
+body {
+  font-family: 'Literata', 'Taamey Frank CLM';
+  font-size: 12pt;
+}
+
+body * {
+  line-height: inherit;
+}
+
+[lang=he], [lang=yi]{
+  font-family: 'Taamey Frank CLM';
+  direction: rtl;
+}
+
+h1, h2  {
+  text-align: center;
+  font-weight: normal;
+  font-family: 'Taamey Frank CLM';
+}
+
+h1[lang=he], h2 [lang=he] {
+  font-family: 'Shlomo';
+}
+
+.face{
+  text-align: center;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.title{
+  height: 5cm;
+  vertical-align: bottom;
+}
+
+.title h1 {
+  border-bottom: 2px solid black;
+  padding: 1.5em 0;
+  margin: auto 1.5cm;
+  margin-top: 2em;
+  margin-bottom: 9.5em;
+}
+
+.bgimage {
+    background-image: url('../../../star-of-david.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12em;
+    height: 18cm;
+}
+
+.langlist {
+  padding: 1em auto;
+  width: 60%;
+}
+
+h2{
+  break-before: always !important;
+  break-after: avoid !important;
+}
+
+.dot{
+  font-weight: bold !important;
+  font-family: 'Literata';
+  font-size: 1em;
+  display: inline-block;
+  width: 4em;
+  visibility: hidden;
+}
+
+h2::before, h2::after, .endbar{
+  content: "—";
+  padding: 0 0.5em;
+  font-weight: normal;
+  font-size: xx-large;
+  text-align: center;
+  display: none;
+}
+
+table {
+  width: 100% !important;
+  margin: 0 auto;
+  margin-bottom: 0.33rem !important;
+}
+
+tr {
+  page-break-inside: avoid !important;
+}
+
+td {
+  padding: 0;
+  margin: 0;
+}
+
+.r-index, .l-index {
+  vertical-align: top;
+  width: 1em;
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 0.66em;
+  line-height: 1.33;
+  font-family: 'Shlomo' !important;
+}
+
+.l-index{
+  padding-right: 0.5em !important;
+  text-align: center;
+}
+
+.r-index{
+  padding-left: 0.5em !important;
+  text-align: center;
+}
+
+.text{
+  padding: 0;
+  margin: 0;
+}
+
+.text p {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  hyphens: none;
+  font-size: 1.1em;
+  line-height: 1.25em !important;
+}
+
+.text p:not([lang=he]) {
+  text-align: justify;
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+.text b {
+  font-weight: normal;
+  color: black;
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.33px;
+  -webkit-text-stroke-color: black;
+}
+
+.row_1 {
+	font-size: 1.5rem !important; 
+}
+
+.row_2 {
+    font-size: 0.85rem !important;
+    }
+
+.row_2[lang=yi] {
+	font-family: 'Taamey Frank CLM' !important;
+	font-size: 1.25em !important;
+}
+
+
+.note_1 {
+	font-style: italic;
+}
+
+[lang=he] .note_1, [lang=he] i {
+	font-style: normal;
+	vertical-align: middle;
+	font-size: 0.75em;
+  color: gray;
+}
